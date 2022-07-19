@@ -20,10 +20,10 @@ deverá listar todos os produtos com aquela respectiva busca, poderá ser feito 
 
 - [ ] Ter uma cobertura de teste relativamente boa, a maior que você conseguir.
 - [x] Usar PHP.
-- [ ] Pode usar qualquer framework PHP para o desenvolvimento ou não usar nenhum, fica a sua escolha.
+- [x] Pode usar qualquer framework PHP para o desenvolvimento ou não usar nenhum, fica a sua escolha. Laravel
 - [ ] Criar cache para consulta.
 
 ### Plus - Não necessário
-- [ ] Colocar uma autenticacão JWT.
-- [ ] Usar PHP 7.1
+- [x] Colocar uma autenticacão JWT.
+- [x] Usar PHP 7.4
 

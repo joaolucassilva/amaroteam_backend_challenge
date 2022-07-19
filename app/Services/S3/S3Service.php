@@ -2,7 +2,6 @@
 
 namespace App\Services\S3;
 
-use Exception;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
