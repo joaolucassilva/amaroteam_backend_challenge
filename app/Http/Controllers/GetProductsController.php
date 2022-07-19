@@ -2,12 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\JsonResponse;
+use App\Models\Product;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
 
 class GetProductsController extends Controller
 {
-    public function __invoke(): JsonResponse
+    public function __invoke(Request $request)
     {
-        return response()->json(['message' => 'deu certo']);
+        $currentPage = $request->get('page') ?? 1;
+        $key = 'product_' . $currentPage;
+        return Cache::remember($key, null, function () {
+            return Product::paginate();
+        });
     }
 }

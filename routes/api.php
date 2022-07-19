@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Route;
 Route::post('register', UserRegisterController::class);
 
 Route::group([
-    'middleware' => 'auth',
+    'middleware' => 'api',
     'prefix' => 'auth'
 ], function () {
     Route::post('login', [AuthController::class, 'login']);
@@ -19,7 +19,7 @@ Route::group([
 });
 
 Route::group([
-    'middleware' => 'auth'
+    'middleware' => ['api', 'auth']
 ], function () {
     Route::group([
         'prefix' => 'products'
